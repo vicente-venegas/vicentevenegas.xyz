@@ -45,6 +45,8 @@ export function ProjectCard({
 }: ProjectCardProps) {
   const imageStateClasses = isHovered ? "scale-[1.02] grayscale brightness-75" : "";
   const overlayStateClasses = isHovered ? "opacity-60" : "";
+  const tags = role.split(",").map((tag) => tag.trim());
+  const truncatedRole = tags.length > 1 ? `${tags[0]}...` : role;
 
   return (
     <div
@@ -73,7 +75,8 @@ export function ProjectCard({
           {title}
         </h3>
         <div className="flex items-center gap-3 text-[#B3B3B3] text-xs md:text-sm flex-wrap">
-          <span>{role}</span>
+          <span className="md:hidden lg:inline">{role}</span>
+          <span className="hidden md:inline lg:hidden">{truncatedRole}</span>
           <span className="text-[color:var(--vv-accent)]">•</span>
           <span>{year}</span>
         </div>
