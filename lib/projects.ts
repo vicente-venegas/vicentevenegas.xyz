@@ -13,7 +13,7 @@ export type Project = {
   blocks?: Block[]; // 👈 flexible page content
 };
 
-const parseDate = (value?: string) => {
+export const parseDate = (value?: string) => {
   if (!value) return 0;
   const [year, month = "01"] = value.split("-");
   return Number(new Date(Number(year), Number(month) - 1, 1));
@@ -162,7 +162,7 @@ export const projects: Project[] = [
 
     cover: "/images/projects/carvuk/cover.png",
     alt: "Carvuk app interface mockups and research artifacts.",
-    date: "2024-11",
+    date: "2023-1",
     tags: "UX Research, Service Design",
 
     // blocks: [...]  // add when ready
@@ -279,7 +279,7 @@ export const projects: Project[] = [
 
     cover: "/images/projects/wirun/cover.png",
     alt: "Wirun platformer screens with macroalgae environments.",
-    date: "2023-10",
+    date: "2022-10",
     tags: "Videogame, Education, Animation",
 
     // blocks: [...]
@@ -383,7 +383,7 @@ export const projects: Project[] = [
 
     cover: "/images/projects/cabron/BAG.png",
     alt: "Cabrón charcoal bag photographed on a dark background.",
-    date: "2023-5",
+    date: "2022-5",
     tags: "Branding, Identity, Packaging",
 
     blocks: [
@@ -521,7 +521,7 @@ export const projects: Project[] = [
 
     cover: "/images/projects/blitz/cover.png",
     alt: "Blitz triangular box with crowned logotype and checker accents.",
-    date: "2022-1",
+    date: "2021-1",
     tags: "Branding, Identity, Packaging",
 
     // blocks: [...]
@@ -860,14 +860,13 @@ export const projects: Project[] = [
   },
 
   // Loop Bench
-  /*
   {
       slug: "loop-bench",
       title: "Loop Bench",
 
       cover: "/images/projects/loop-bench/cover.png",
       alt: "Two-seat plywood bench assembled with zip ties.",
-      date: "2022-11",
+      date: "2021-11",
       tags: "Industrial Design, Prototyping, CAD/CAM",
 
       // blocks: [...]
@@ -937,7 +936,7 @@ export const projects: Project[] = [
       ],
       
   },
-  */
+
   // Registro Civil
   {
     slug: "registro-civil",
@@ -1172,6 +1171,90 @@ export const projects: Project[] = [
     ],
   },
 
+  // Copec Immersive History Room
+  {
+    slug: "copec-immersive",
+    title: "Copec Immersive History",
+    cover: "/images/projects/copec/cover.png",
+    alt: "Immersive Copec installation with historical graphics and LED lighting.",
+    date: "2025-11",
+    tags: "Graphic Design, Environmental Design, Visual Storytelling",
+
+    blocks: [
+      {
+        type: "text",
+        heading: "What it is",
+        body:
+          "A full-room graphic installation for Copec’s 90-year immersive stand experience. The project involved unifying archival photos, timelines, and energy-transition imagery into a cohesive spatial narrative across five walls and multiple cutouts.",
+      },
+
+      // 01 — video
+      {
+          type: "video",
+          src: "/images/projects/copec/video.mp4",
+          label: "Walkrough of the Copec immersive history room",
+          autoplay: true,
+          muted: true,
+          loop: true,
+          playsInline: true,
+          // controls off by default
+      },
+
+      { type: "spacer" },
+
+      {
+        type: "text",
+        heading: "Visual system",
+        body:
+          "A mix of archival photography, custom illustrations, and modular timeline elements were brought into a single visual language. Transitions between decades were unified through consistent use of Copec’s brand cues while still allowing each era to feel distinct. Because the archive varied widely in resolution and condition, the project required a combination of AI enhancement, manual retouching, and selective colorization to achieve a balanced look across large-scale surfaces.",
+      },
+
+      // Full-width image: energy transition wall
+      {
+        type: "image",
+        image: {
+          src: "/images/projects/copec/02-history.png",
+          alt: "Large-format digital and printed wall showcasing Copec’s solar and electromobility era.",
+        },
+      },
+
+      {
+        type: "image",
+        image: {
+          src: "/images/projects/copec/03-cutout.png",
+          alt: "Large-format digital and printed wall showcasing Copec’s solar and electromobility era.",
+        },
+      },
+
+      { type: "spacer" },
+
+      {
+        type: "text",
+        heading: "Approach",
+        body:
+          "The experience is structured as a chronological walk-through: early stations and attendants, infrastructure growth, and finally the transition to electromobility and clean energy. LED accents and screen content help separate eras while keeping the environment cohesive.",
+      },
+
+      {
+        type: "image",
+        image: {
+          src: "/images/projects/copec/01-room.png",
+          alt: "Copec's electromobility wall with large-format historical graphics and LED accents.",
+        },
+      },
+
+
+
+      { type: "spacer" },
+
+      {
+        type: "text",
+        heading: "Outcome",
+        body:
+          "The result is an environment that feels part museum, part playful brand experience—designed to inform without becoming heavy. The full package included production-ready wall graphics, cutouts, and a cohesive content structure adapted for fabrication and installation.",
+      },
+    ],
+  },
 
   
 ];

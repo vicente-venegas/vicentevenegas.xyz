@@ -75,12 +75,12 @@
   --vv-transition-standard: 300ms;
   --vv-transition-smooth: 500ms;
   --vv-transition-slow: 700ms;
-  --vv-glow-alpha: 40%;
+  --vv-glow-alpha: 10%;
   --vv-glow-height: 1920px;
 
   /* Noise and Grid */
   --vv-noise-opacity: 0.03;
-  --vv-grid-opacity: 0.06;
+  --vv-grid-opacity: 0;
 
   /* Derived layout values */
   --vv-margin-fluid: clamp(8px, 2.5vw, var(--vv-margin-desktop));

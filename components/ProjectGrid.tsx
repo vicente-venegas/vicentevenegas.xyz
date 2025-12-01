@@ -4,14 +4,14 @@ import { useState } from "react";
 import Link from "next/link";
 
 import { ProjectCard } from "@/components/library/ProjectCard";
-import { projects as allProjects } from "@/lib/projects";
+import { projects as allProjects, parseDate } from "@/lib/projects";
 
 export function ProjectGrid() {
   const [hoveredSlug, setHoveredSlug] = useState<string | null>(null);
 
   const projects = allProjects
     .filter((project) => !project.draft)
-    .sort((a, b) => (b.date ?? "").localeCompare(a.date ?? ""));
+    .sort((a, b) => parseDate(b.date) - parseDate(a.date));
 
   return (
     <section

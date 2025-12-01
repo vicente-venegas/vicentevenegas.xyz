@@ -16,7 +16,7 @@ export function Hero() {
       <div className="max-w-5xl w-full fade-in">
         <div className="mb-4" style={{ fontFamily: 'Space Mono, monospace' }}>
           <span className="text-[#00CE93] uppercase tracking-wider text-xs md:text-sm label-glow">
-            Designer & Creative Technologist
+            Interdisciplinary Designer
           </span>
         </div>
         <h1 className="text-[#EDEDED] mb-6 text-4xl md:text-5xl lg:text-7xl">
