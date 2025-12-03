@@ -48,7 +48,7 @@ export default function AboutSection() {
                 About
               </div>
               <h1 className="text-[#EDEDED] mb-6 text-4xl md:text-4xl leading-tight">
-                Interdisciplinary Designer
+                Designer & Creative Technologist
               </h1>
               <div className="space-y-4">
                 <p className="vv-body">
